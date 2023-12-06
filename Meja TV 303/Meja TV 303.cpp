@@ -38,15 +38,16 @@ float laciBawahPositionZ = -0.84;
 float TV = 0.0f;
 float TV2 = 0.0f;
 
-static unsigned int texture[8]; // Array of texture ids.
+static unsigned int texture[9]; // Array of texture ids.
 static int id = 0; // ID untuk Layar
-static int id2 = 4; // ID untuk Kayu
+static int id2 = 5; // ID untuk Kayu
 
 void loadTextures()
 {
     const char* texturePaths[] = {
         "Textures/Pens.bmp",
         "Textures/Home.bmp",
+        "Textures/win7.bmp",
         "Textures/win7.bmp",
         "Textures/Yutub.bmp",
         "Textures/Wood.bmp",
@@ -56,7 +57,7 @@ void loadTextures()
     };
 
     // Loop through each texture
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < 9; ++i) {
         int width, height, channels;
 
         // Load image using stb_image
@@ -181,14 +182,14 @@ void keyboardFunc(unsigned char key, int x, int y) {
     if (key == 'w') {
         id++;
         if (id == 2) id = 3;
-        if (id == 4) id = 0;
+        if (id == 5) id = 0;
         loadTextures();
         glutPostRedisplay();
     }
 
     if (key == 'f') {
         id2++;
-        if (id2 == 8) id2 = 4;
+        if (id2 == 9) id2 = 5;
         loadTextures();
         glutPostRedisplay();
     }
