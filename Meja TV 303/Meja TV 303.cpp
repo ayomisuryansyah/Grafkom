@@ -1,3 +1,6 @@
+//Ayomi Suryansyah - 5222600008
+//Hadyan Bagus - 5222600009
+
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
